@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Betting Mini App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">⚡ BETTING</div>
+    <button id="loginBtn">Login</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Sports & Virtual Games</h1>
+      <p>Fast Keno • Aviator • Chicken Road • Hot 5/7 • Virtual • Football</p>
+    </section>
+
+    <nav class="tabs" id="tabs">
+      <button class="active" data-game="football">⚽ Football</button>
+      <button data-game="keno">🎯 Fast Keno</button>
+      <button data-game="aviator">✈️ Aviator</button>
+      <button data-game="chicken">🐔 Chicken Road</button>
+      <button data-game="hot">🔥 Hot 5/7</button>
+      <button data-game="virtual">🎮 Virtual</button>
+      <button onclick="renderAllGames()">🎰 All Games</button>
+    </nav>
+
+    <section id="content"></section>
+
+    <aside class="slip">
+      <h2>Bet Slip</h2>
+      <div id="slipItems"><p class="muted">No selections yet.</p></div>
+      <div class="stake">
+        <label>Stake (ETB)</label>
+        <input id="stake" type="number" min="1" value="10">
+      </div>
+      <div class="total"><span>Potential win</span><strong id="potential">ETB 0.00</strong></div>
+      <button class="place" id="placeBtn">Place Bet</button>
+      <p class="notice">Real-money betting requires the applicable gambling licence, age/KYC controls and compliant payment processing before launch.</p>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
